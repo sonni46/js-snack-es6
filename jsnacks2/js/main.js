@@ -24,20 +24,21 @@ const squadre = [
         falli: 0
     },
 ]
+console.log(squadre)
 
 // Generare numeri random al posto degli 0 nelle proprietà:
 // Punti fatti e falli subiti.
+// Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
+const arrayFalli = [];
 
 for(let key in squadre ) {
     squadre[key].punti = random(1,50);
     squadre[key].falli = random(1,10);
+    const {nome,falli} = squadre[key];
+    arrayFalli.push({nome,falli})
 }
+console.log(arrayFalli)
 
-// Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
-
-const {nome,falli,punti} = squadre;
-
-console.log (squadre)
 
 // function// function// function// function
 function random(min,max) {

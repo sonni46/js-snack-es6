@@ -35,9 +35,9 @@ for(let key in squadre ) {
     squadre[key].punti = random(1,50);
     squadre[key].falli = random(1,10);
     const {nome,falli} = squadre[key];
-    arrayFalli.push({nome,falli})
+    arrayFalli.push({nome,falli});
 }
-console.log(arrayFalli)
+console.log(arrayFalli);
 
 
 // function// function// function// function

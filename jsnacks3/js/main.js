@@ -3,8 +3,16 @@
 // La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri.
 // Usiamo i nuovi metodi degli array foreach o filter.
 const myArray = [1,2,3,4,5,6,7,8,9,10];
-let a = parseInt(random(1, 10)); 
-let b = parseInt(random(1, 10)); 
+
+let a;
+let b;
+
+do {
+a = parseInt(random(1, 10)); 
+b = parseInt(random(1, 10)); 
+}while (a >= b);
+    
+
 
 console.log(`${a} e ${b}`);
 
@@ -17,8 +25,6 @@ const myFuction = (array,a,b) => {
     return newArray;   
 }
 }
-
-
 
 console.log(myFuction(myArray,a,b))
 
